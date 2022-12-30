@@ -7,7 +7,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Today is Fri 30 Dec 2022. Time 10:37 AM(+6:30)
+          <br/>          
+          Powered by docker-compose
         </p>
         <a
           className="App-link"

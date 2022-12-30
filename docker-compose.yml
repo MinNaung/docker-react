@@ -1,0 +1,26 @@
+version: '3.5'
+
+services:
+  web:
+    build:
+      # . refer to the current project directory(on local machine) where docker-compose.yml is located.
+      context: .
+      dockerfile: Dockerfile.dev    
+    ports:
+      - "3000:3000"
+    volumes:
+      # this will be ignored/excluded from mapping
+      - /app/node_modules
+      # this will map /app inside container to the project root folder of the local machine.
+      - ".:/app"
+  tests:
+    build:
+      # . refer to the current project directory(on local machine) where docker-compose.yml is located.
+      context: .
+      dockerfile: Dockerfile.dev    
+    volumes:
+      # this will be ignored/excluded from mapping
+      - /app/node_modules
+      # this will map /app inside container to the project root folder of the local machine.
+      - ".:/app"
+    command: ["npm", "run", "test"]
