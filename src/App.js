@@ -7,9 +7,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Today is Fri 30 Dec 2022. Time 10:37 AM(+6:30)
+          Today is Fri 30 Dec 2022. Time 4:47 PM(+6:30)
           <br/>          
-          Powered by docker-compose
+          Deployed on AWS Elastic Beanstalk by Travis CI
         </p>
         <a
           className="App-link"
